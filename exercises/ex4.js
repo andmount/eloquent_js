@@ -1,25 +1,10 @@
-function arrayToList(array) {
-  let list = null;
+function range(start, end) {
+  range_array = [];
 
-  for (let i = array.length - 1; i >= 0; i--) {
-    list = {value: array[i], rest: list};
+  for (i = start; i <= end; i++) {
+    range_array.push(i); 
   }
-  return list;
+  return range_array;
 }
 
-function prepend(element, list) {
-  return list = {value: element, rest: list}
-}
-
-function nth(list, index) {
-  if (index === 1) list.value;
-  else nth(list, index - 1 );
-}
-
-// let list = null;
-
-// list = {value: 1, rest: list};
-// list = {value: 2, rest: list};
-// console.log(list);
-
-console.log(prepend(50, (arrayToList([10, 20]))));
+console.log(range(5, 17));
